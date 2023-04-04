@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./sass/custom.css" />
+    <title>Menú restaurant</title>
+  </head>
+  <body>
+    <!-- Encabezado -->
+    <!-- <header class="body_background vh-20">
+      <div class="container">
+        <div
+          class="row pt-5 row-cols-2 row-cols-md-4 row-cols-lg-6 align-items-center justify-content-center"
+        >
+          <h5 class="logotipe">Coffee Shop</h5>
+        </div>
+      </div>
+    </header> -->
+    <main>
+      <div class="container-fluid min-vh-100">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3">
+          <section class="body_background"></section>
+          <!-- Las etiquetas section tienen 100vh height -->
+          <!-- Sección de recomendados -->
+          <section>
+            <header>
+              <div class="container-fluid">
+                <div class="row justify-content-center py-5">
+                  <div class="col-12 text-center">
+                    <h3 class="fw-semibold">Recomendados de la semana</h3>
+                    <p class="fst-italic">Semana 13/8 ~ 20/8</p>
+                  </div>
+                </div>
+              </div>
+            </header>
+            <div id="weeklyItemsList">
+              <!-- Producto individual -->
+              <!-- <article class="container-fluid">
+                <div class="row">
+                  <div class="col-9">
+                    <div class="d-flex align-items-start">
+                      <h5 class="fs-6">Avocado Toast</h5>
+                      <p>V</p>
+                      <p>C</p>
+                      <p>N</p>
+                    </div>
+                    <p class="fst-italic fs-6">
+                      Tostada con crema de palta, queso blanco, tomates cherrys
+                      y huevo poché.
+                    </p>
+                  </div>
+                  <div class="col-3 fs-6">
+                    <p>$ 1200</p>
+                  </div>
+                </div>
+              </article> -->
+            </div>
+          </section>
+          <!-- Cafetería -->
+          <section>
+            <header>
+              <div class="container-fluid">
+                <div class="row justify-content-center py-5">
+                  <div class="col-12 text-center">
+                    <h3 class="fw-semibold">Cafeteria</h3>
+                  </div>
+                </div>
+              </div>
+            </header>
+            <div id="coffeeItemsList">
+              <!-- Producto individual -->
+            </div>
+          </section>
+          <!-- Especialidades -->
+          <section>
+            <header>
+              <div class="container-fluid">
+                <div class="row justify-content-center py-5">
+                  <div class="col-12 text-center">
+                    <h3 class="fw-semibold">Especialidades</h3>
+                  </div>
+                </div>
+              </div>
+            </header>
+            <div id="specialsItemsList"></div>
+          </section>
+          <!-- Bebidas -->
+          <section class="">
+            <header>
+              <div class="container-fluid">
+                <div class="row justify-content-center py-5">
+                  <div class="col-12 text-center">
+                    <h3 class="fw-semibold">Bebidas</h3>
+                  </div>
+                </div>
+              </div>
+            </header>
+            <div id="drinksItemsList"></div>
+          </section>
+          <!-- Desayunos y meriendas -->
+          <section class="">
+            <header>
+              <div class="container-fluid">
+                <div class="row justify-content-center py-5">
+                  <div class="col-12 text-center">
+                    <h3 class="fw-semibold">Desayunos y meriendas</h3>
+                    <p class="fst-italic">
+                      Disponible de 8am - 12pm y de 15pm a 19pm
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </header>
+            <div id="breakfastItemsList"></div>
+          </section>
+        </div>
+      </div>
+      <div class="container-fluid min-vh-100">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+          <section>
+            <header>
+              <div class="container-fluid">
+                <div class="row justify-content-center py-5">
+                  <div class="col-12 text-center">
+                    <h3 class="fw-semibold">Tortas y postres</h3>
+                  </div>
+                </div>
+              </div>
+            </header>
+            <div id="cakesItemsList"></div>
+          </section>
+          <section>
+            <header>
+              <div class="container-fluid">
+                <div class="row justify-content-center py-5">
+                  <div class="col-12 text-center">
+                    <h3 class="fw-semibold">Veggies</h3>
+                  </div>
+                </div>
+              </div>
+            </header>
+            <div id="veggieItemsList"></div>
+          </section>
+          <section>
+            <header>
+              <div class="container-fluid">
+                <div class="row justify-content-center py-5">
+                  <div class="col-12 text-center">
+                    <h3 class="fw-semibold">Brunch</h3>
+                  </div>
+                </div>
+              </div>
+            </header>
+            <div id="brunchItemsList"></div>
+          </section>
+          <section>Imagen</section>
+          <section>Imagen</section>
+          <section class="body_background"></section>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="/scripts/scripting.js"></script>
+  </body>
+</html>
