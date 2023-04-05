@@ -14,23 +14,189 @@
     <title>Menú restaurant</title>
   </head>
   <body>
-    <!-- Encabezado -->
-    <!-- <header class="body_background vh-20">
-      <div class="container">
-        <div
-          class="row pt-5 row-cols-2 row-cols-md-4 row-cols-lg-6 align-items-center justify-content-center"
-        >
-          <h5 class="logotipe">Coffee Shop</h5>
+    <header>
+      <nav class="navbar bg-transparent fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand logo" href="#">Coffee Shop</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="offcanvas offcanvas-end"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                Coffee Shop
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >Inicio</a
+                  >
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Categorías
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="#weekly">Recomendados</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#coffee">Cafetería</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#specials"
+                        >Especialidades</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#drinks">Bebidas</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#breakfast"
+                        >Desayunos y meriendas</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#cakes"
+                        >Tortas y postres</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#veggie">Veggies</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#brunch">Brunch</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="divider"></div>
+              <p>Administración de productos</p>
+              <form class="d-flex flex-column mt-3" id="addProduct">
+                <div class="mb-3">
+                  <input
+                    type="text"
+                    name="title"
+                    class="form-control"
+                    placeholder="Nombre del producto"
+                  />
+                </div>
+                <div class="mb-3">
+                  <input
+                    type="text"
+                    name="description"
+                    class="form-control"
+                    placeholder="Descripción"
+                  />
+                </div>
+                <div class="mb-3">
+                  <input
+                    type="number"
+                    name="price"
+                    class="form-control"
+                    placeholder="Precio"
+                  />
+                </div>
+                <div class="d-flex gap-3 mb-3">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      name="veggie"
+                      id="checkVeggie"
+                    />
+                    <label class="form-check-label" for="checkVeggie">
+                      Vegano
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      name="celiac"
+                      id="checkCeliac"
+                    />
+                    <label class="form-check-label" for="checkVeggie">
+                      Celíaco
+                    </label>
+                  </div>
+                </div>
+                <select
+                  class="form-select mb-3"
+                  aria-label="Categorias"
+                  name="category"
+                >
+                  <option selected>Categorías</option>
+                  <option value="weekly">Recomendado de la semana</option>
+                  <option value="coffee">Cafetería</option>
+
+                  <option value="specials">Especialidades</option>
+                  <option value="drinks">Bebidas</option>
+                  <option value="breakfast">Desayunos y meriendas</option>
+                  <option value="cakes">Tortas y postres</option>
+                  <option value="veggie">Veggies</option>
+                  <option value="brunch">Brunch</option>
+                </select>
+                <button type="submit" class="btn btn-primary mb-3">
+                  Agregar producto
+                </button>
+              </form>
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Lista de productos
+                  </a>
+                  <ul class="dropdown-menu" id="adminProductList">
+                    <!-- <li class="dropdown-item">Recomendados</li> -->
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </div>
-    </header> -->
+      </nav>
+    </header>
     <main>
       <div class="container-fluid min-vh-100">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3">
           <section class="body_background"></section>
           <!-- Las etiquetas section tienen 100vh height -->
           <!-- Sección de recomendados -->
-          <section>
+          <section class="bg-primary" id="weekly">
             <header>
               <div class="container-fluid">
                 <div class="row justify-content-center py-5">
@@ -41,6 +207,7 @@
                 </div>
               </div>
             </header>
+
             <div id="weeklyItemsList">
               <!-- Producto individual -->
               <!-- <article class="container-fluid">
@@ -65,7 +232,7 @@
             </div>
           </section>
           <!-- Cafetería -->
-          <section>
+          <section id="coffee">
             <header>
               <div class="container-fluid">
                 <div class="row justify-content-center py-5">
@@ -80,7 +247,7 @@
             </div>
           </section>
           <!-- Especialidades -->
-          <section>
+          <section id="specials">
             <header>
               <div class="container-fluid">
                 <div class="row justify-content-center py-5">
@@ -93,7 +260,7 @@
             <div id="specialsItemsList"></div>
           </section>
           <!-- Bebidas -->
-          <section class="">
+          <section id="drinks">
             <header>
               <div class="container-fluid">
                 <div class="row justify-content-center py-5">
@@ -106,7 +273,7 @@
             <div id="drinksItemsList"></div>
           </section>
           <!-- Desayunos y meriendas -->
-          <section class="">
+          <section id="breakfast">
             <header>
               <div class="container-fluid">
                 <div class="row justify-content-center py-5">
@@ -125,7 +292,8 @@
       </div>
       <div class="container-fluid min-vh-100">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
-          <section>
+          <!-- Tortas y postres -->
+          <section id="cakes">
             <header>
               <div class="container-fluid">
                 <div class="row justify-content-center py-5">
@@ -137,7 +305,8 @@
             </header>
             <div id="cakesItemsList"></div>
           </section>
-          <section>
+          <!-- Veganos -->
+          <section id="veggie">
             <header>
               <div class="container-fluid">
                 <div class="row justify-content-center py-5">
@@ -149,7 +318,8 @@
             </header>
             <div id="veggieItemsList"></div>
           </section>
-          <section>
+          <!-- Brunch -->
+          <section id="brunch">
             <header>
               <div class="container-fluid">
                 <div class="row justify-content-center py-5">
@@ -161,12 +331,14 @@
             </header>
             <div id="brunchItemsList"></div>
           </section>
-          <section>Imagen</section>
-          <section>Imagen</section>
           <section class="body_background"></section>
         </div>
       </div>
     </main>
     <script type="module" src="/scripts/scripting.js"></script>
+    <script type="module" src="/scripts/addProduct.js"></script>
+    <script type="module" src="/scripts/adminList.js"></script>
+    <script src="/scripts/popper.min.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
   </body>
 </html>

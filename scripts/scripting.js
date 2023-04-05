@@ -1,4 +1,4 @@
-import MenuItem from "./MenuItem.js";
+import { products } from "./products.js";
 
 const weeklyItemsList = document.getElementById("weeklyItemsList");
 const coffeeItemsList = document.getElementById("coffeeItemsList");
@@ -9,7 +9,7 @@ const cakesItemsList = document.getElementById("cakesItemsList");
 const veggieItemsList = document.getElementById("veggieItemsList");
 const brunchItemsList = document.getElementById("brunchItemsList");
 
-const sections = [
+export const sections = [
   weeklyItemsList,
   coffeeItemsList,
   specialsItemsList,
@@ -20,7 +20,7 @@ const sections = [
   brunchItemsList,
 ];
 
-const categories = [
+export const categories = [
   "weekly",
   "coffee",
   "specials",
@@ -31,119 +31,72 @@ const categories = [
   "brunch",
 ];
 
-const avocado = new MenuItem(
-  "Avocado",
-  "Tostada con crema de palta, queso blanco, tomates cherrys y huevo poché",
-  "2500",
-  "true",
-  "false",
-  "weekly"
-);
-const huevosRevueltos = new MenuItem(
-  "Huevos Revueltos",
-  "Con panceta ahumada o jamón natural L'Abratto.",
-  "2000",
-  "true",
-  "false",
-  "weekly"
-);
-const medialunas = new MenuItem(
-  "Medialuna con Jamón y Queso",
-  "Medialuna tibia con jamón natural L´abratto y queso muzzarella gratinado.",
-  "2000",
-  "true",
-  "false",
-  "weekly"
-);
-
-const oreoLatte = new MenuItem(
-  "Oreo Latte",
-  "Café espresso, leche, helado de crema americana granizada, charlotte de chocolate semiamargo, crema chantilly y Cookie",
-  "2000",
-  "true",
-  "false",
-  "specials"
-);
-
-const ensaladaFrutas = new MenuItem(
-  "Ensalada de frutas",
-  "Selección de frescas y variadas frutas de estación maceradas en su jugo.",
-  "1000",
-  "true",
-  "false",
-  "veggie"
-);
-const tradicional = new MenuItem(
-  "Tradicional",
-  "Café con leche o té + 2 medialsunas o tostadas, manteca y mermelada. Jugo de naranja.",
-  "2000",
-  "true",
-  "false",
-  "breakfast"
-);
-
-const products = [
-  avocado,
-  huevosRevueltos,
-  medialunas,
-  oreoLatte,
-  tradicional,
-  ensaladaFrutas,
-];
 const createItemTag = (item) => {
   let itemTag = `
-        <article class="container-fluid">
+        
              <div class="row">
                 <div class="col-9">
-                    <div class="d-flex align-items-start">
-                        <h5 class="fs-6">${item.title}</h5>
-                        ${item.veggie ? "<p>V</p>" : ""}
-                        ${item.celiac ? "<p>C</p>" : ""}
+                    <div class="d-flex align-items-center gap-3">
+                        <h5 class="fs-6 title_background">${item.title}</h5>
+                        ${
+                          item.veggie == true
+                            ? `<img  src="img/vegan.png" alt="vegan"/>`
+                            : ""
+                        }
+                        ${
+                          item.celiac == true
+                            ? `<img  src="img/sin-gluten.png" alt="celiac"/>`
+                            : ""
+                        }
                        
                     </div>
-                    <p class="fst-italic fs-6">
-                       ${item.description}
-                    </p>
+                    
+                    ${
+                      item.description
+                        ? `<p class="fst-italic fs-6">${item.description}</p>`
+                        : ""
+                    }
+                    
                 </div>
                 <div class="col-3 fs-6">
                     <p>$ ${item.price}</p>
                 </div>
             </div>
-        </article>
+        
     `;
   return itemTag;
 };
 
-const createElement = (item) => {
+export const createElement = (item) => {
   const newArticle = document.createElement("article");
   newArticle.classList.add("container-fluid");
   newArticle.innerHTML = createItemTag(item);
   return newArticle;
 };
 
-for (let i = 0; i < sections.length; i++) {
-  const currProduct = products.filter(
-    (product) => product.category == categories[i]
-  );
-  for (let p of currProduct) {
-    sections[i]?.appendChild(createElement(p));
+export function renderProducts() {
+  for (let i = 0; i < sections.length; i++) {
+    while (sections[i].firstChild) {
+      sections[i].removeChild(sections[i].firstChild);
+    }
   }
-  //   sections[i]?.appendChild(createElement(huevosRevueltos));
-  //   sections[i]?.appendChild(createElement(huevosRevueltos));
+
+  for (let i = 0; i < sections.length; i++) {
+    const currProduct = products.filter(
+      (product) => product.category == categories[i]
+    );
+    for (let p of currProduct) {
+      sections[i]?.appendChild(createElement(p));
+    }
+  }
 }
 
-// const filterProduct = (product) => {
-//   return product.category == "weekly";
-// };
-
-const productsFiltered = products.filter(
-  (product) => product.category == "weekly"
-);
-console.log(productsFiltered);
-// console.log(products[0].category);
-
-// function esSuficientementeGrande(elemento) {
-//     return elemento >= 10;
+renderProducts();
+// for (let i = 0; i < sections.length; i++) {
+//   const currProduct = products.filter(
+//     (product) => product.category == categories[i]
+//   );
+//   for (let p of currProduct) {
+//     sections[i]?.appendChild(createElement(p));
 //   }
-//   var filtrados = [12, 5, 8, 130, 44].filter(esSuficientementeGrande);
-//   // filtrados es [12, 130, 44]
+// }
