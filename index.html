@@ -11,13 +11,13 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./sass/custom.css" />
-    <title>Menú restaurant</title>
+    <title>Menú Cafetería</title>
   </head>
-  <body>
+  <body class="bg-primary">
     <header>
       <nav class="navbar bg-transparent fixed-top">
         <div class="container-fluid">
-          <a class="navbar-brand logo" href="#">Coffee Shop</a>
+          <a class="navbar-brand logo" href="#">La casa del café</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -36,7 +36,7 @@
           >
             <div class="offcanvas-header">
               <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-                Coffee Shop
+                La casa del café
               </h5>
               <button
                 type="button"
@@ -180,9 +180,7 @@
                   >
                     Lista de productos
                   </a>
-                  <ul class="dropdown-menu" id="adminProductList">
-                    <!-- <li class="dropdown-item">Recomendados</li> -->
-                  </ul>
+                  <ul class="dropdown-menu" id="adminProductList"></ul>
                 </li>
               </ul>
             </div>
@@ -191,13 +189,16 @@
       </nav>
     </header>
     <main>
-      <div class="container-fluid min-vh-100">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3">
+      <div class="container-fluid min-vh-100 px-0">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 gx-0">
           <section class="body_background"></section>
           <!-- Las etiquetas section tienen 100vh height -->
           <!-- Sección de recomendados -->
           <section class="bg-primary" id="weekly">
             <header>
+              <div class="vh-20 overflow-hidden d-flex align-items-center">
+                <img src="/img/weekly.jpg" class="img-fluid" />
+              </div>
               <div class="container-fluid">
                 <div class="row justify-content-center py-5">
                   <div class="col-12 text-center">
@@ -208,31 +209,13 @@
               </div>
             </header>
 
-            <div id="weeklyItemsList">
-              <!-- Producto individual -->
-              <!-- <article class="container-fluid">
-                <div class="row">
-                  <div class="col-9">
-                    <div class="d-flex align-items-start">
-                      <h5 class="fs-6">Avocado Toast</h5>
-                      <p>V</p>
-                      <p>C</p>
-                      <p>N</p>
-                    </div>
-                    <p class="fst-italic fs-6">
-                      Tostada con crema de palta, queso blanco, tomates cherrys
-                      y huevo poché.
-                    </p>
-                  </div>
-                  <div class="col-3 fs-6">
-                    <p>$ 1200</p>
-                  </div>
-                </div>
-              </article> -->
-            </div>
+            <div id="weeklyItemsList"></div>
           </section>
           <!-- Cafetería -->
           <section id="coffee">
+            <div class="vh-20 overflow-hidden d-flex align-items-center">
+              <img src="/img/coffee.jpg" class="img-fluid" />
+            </div>
             <header>
               <div class="container-fluid">
                 <div class="row justify-content-center py-5">
@@ -248,6 +231,9 @@
           </section>
           <!-- Especialidades -->
           <section id="specials">
+            <div class="vh-20 overflow-hidden d-flex align-items-center">
+              <img src="/img/specials.jpg" class="img-fluid" />
+            </div>
             <header>
               <div class="container-fluid">
                 <div class="row justify-content-center py-5">
@@ -261,6 +247,9 @@
           </section>
           <!-- Bebidas -->
           <section id="drinks">
+            <div class="vh-20 overflow-hidden d-flex align-items-center">
+              <img src="/img/drinks.jpg" class="img-fluid" />
+            </div>
             <header>
               <div class="container-fluid">
                 <div class="row justify-content-center py-5">
@@ -274,6 +263,9 @@
           </section>
           <!-- Desayunos y meriendas -->
           <section id="breakfast">
+            <div class="vh-20 overflow-hidden d-flex align-items-center">
+              <img src="/img/breakfast.jpg" class="img-fluid" />
+            </div>
             <header>
               <div class="container-fluid">
                 <div class="row justify-content-center py-5">
@@ -290,10 +282,13 @@
           </section>
         </div>
       </div>
-      <div class="container-fluid min-vh-100">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+      <div class="container-fluid min-vh-100 px-0">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 gx-0">
           <!-- Tortas y postres -->
           <section id="cakes">
+            <div class="vh-20 overflow-hidden d-flex align-items-center">
+              <img src="/img/cakes.jpg" class="img-fluid" />
+            </div>
             <header>
               <div class="container-fluid">
                 <div class="row justify-content-center py-5">
@@ -307,6 +302,9 @@
           </section>
           <!-- Veganos -->
           <section id="veggie">
+            <div class="vh-20 overflow-hidden d-flex align-items-center">
+              <img src="/img/veggie.jpg" class="img-fluid" />
+            </div>
             <header>
               <div class="container-fluid">
                 <div class="row justify-content-center py-5">
@@ -320,6 +318,9 @@
           </section>
           <!-- Brunch -->
           <section id="brunch">
+            <div class="vh-20 overflow-hidden d-flex align-items-center">
+              <img src="/img/brunch.jpg" class="img-fluid" />
+            </div>
             <header>
               <div class="container-fluid">
                 <div class="row justify-content-center py-5">

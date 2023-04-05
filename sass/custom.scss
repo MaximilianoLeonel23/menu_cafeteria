@@ -41,6 +41,14 @@ $utilities: (
       25: 25vh,
     ),
   ),
+  "max-height": (
+    property: max-height,
+    class: mh,
+    values: (
+      100: 100%,
+      20: 20%,
+    ),
+  ),
 );
 // Clases personalizadas CSS
 
@@ -70,12 +78,6 @@ html {
 section {
   height: 100vh;
   background-color: $primary;
-}
-
-.header_img {
-  max-width: 100%;
-  height: auto;
-  align-items: center;
 }
 
 .title_background {
