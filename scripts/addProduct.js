@@ -1,6 +1,9 @@
 import { products } from "./products.js";
 import MenuItem from "./MenuItem.js";
 import { renderProducts } from "./scripting.js";
+import { listProducts } from "./adminList.js";
+import { setLocalStorage } from "./getProducts.js";
+
 const addProduct = document.getElementById("addProduct");
 
 addProduct.addEventListener("submit", (e) => {
@@ -23,6 +26,8 @@ addProduct.addEventListener("submit", (e) => {
 
   pushProduct(newProduct);
   renderProducts();
+  listProducts();
+  setLocalStorage("productos", products);
 });
 
 const pushProduct = (product) => {

@@ -1,5 +1,6 @@
 import MenuItem from "./MenuItem.js";
-
+import { getLocalStorage } from "./getProducts.js";
+import { renderProducts } from "./scripting.js";
 // Weekly
 const avocado = new MenuItem(
   "Avocado",
@@ -125,7 +126,7 @@ const gaseosa = new MenuItem(
   "drinks"
 );
 
-export const products = [
+export let products = [
   avocado,
   huevosRevueltos,
   medialunas,

@@ -92,11 +92,3 @@ export function renderProducts() {
 }
 
 renderProducts();
-// for (let i = 0; i < sections.length; i++) {
-//   const currProduct = products.filter(
-//     (product) => product.category == categories[i]
-//   );
-//   for (let p of currProduct) {
-//     sections[i]?.appendChild(createElement(p));
-//   }
-// }
