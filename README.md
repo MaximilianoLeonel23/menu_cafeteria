@@ -20,7 +20,7 @@
 
 <h4 class="text-lg">\\ Acceso al proyecto</h4>
 
-<div class="col-6 mx-auto bg-white p-3 rounded">
+<div>
  <img src="/img/QRCode.png" class="img-fluid"/>
 </div>
 
