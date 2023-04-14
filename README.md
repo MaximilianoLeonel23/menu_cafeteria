@@ -20,8 +20,8 @@
 
 <h4 class="text-lg">\\ Acceso al proyecto</h4>
 
-<div class="col-6 mx-auto bg-white p-3 rounded">
- <img src="/img/QRCode.png" class="img-fluid"/>
+<div>
+ <img src="img\QRCode.mini.png"/>
 </div>
 
 <a href="https://menu-cafeteria.vercel.app/" target="_blank">Acceda mediante este link</a>.
