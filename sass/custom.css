@@ -55,7 +55,7 @@ section {
 
 .portada_background {
   background-color: rgba(98, 72, 54, 0.5);
-  padding: 1rem 1.5rem;
+  padding: 1rem 1rem;
   border-radius: 1rem;
   margin: auto;
   color: white;
@@ -67,7 +67,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1rem 1.5rem;
+  padding: 1rem 1rem;
   border-radius: 1rem;
   margin: auto;
   color: white;
