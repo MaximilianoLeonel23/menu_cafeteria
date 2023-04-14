@@ -2,7 +2,7 @@ import { products } from "./products.js";
 import MenuItem from "./MenuItem.js";
 import { renderProducts } from "./scripting.js";
 import { listProducts } from "./adminList.js";
-import { setLocalStorage } from "./getProducts.js";
+import { showSucess } from "./successToast.js";
 
 const addProduct = document.getElementById("addProduct");
 
@@ -27,6 +27,7 @@ addProduct.addEventListener("submit", (e) => {
   pushProduct(newProduct);
   renderProducts();
   listProducts();
+  showSucess();
   // setLocalStorage("productos", products);
 });
 

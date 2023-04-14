@@ -107,6 +107,7 @@
                     name="title"
                     class="form-control"
                     placeholder="Nombre del producto"
+                    required
                   />
                 </div>
                 <div class="mb-3">
@@ -115,6 +116,7 @@
                     name="description"
                     class="form-control"
                     placeholder="Descripción"
+                    required
                   />
                 </div>
                 <div class="mb-3">
@@ -123,6 +125,7 @@
                     name="price"
                     class="form-control"
                     placeholder="Precio"
+                    required
                   />
                 </div>
                 <div class="d-flex gap-3 mb-3">
@@ -155,6 +158,7 @@
                   class="form-select mb-3"
                   aria-label="Categorias"
                   name="category"
+                  
                 >
                   <option selected>Categorías</option>
                   <option value="weekly">Recomendado de la semana</option>
@@ -167,9 +171,20 @@
                   <option value="veggie">Veggies</option>
                   <option value="brunch">Brunch</option>
                 </select>
-                <button type="submit" class="btn btn-primary mb-3">
+                <button type="submit" class="btn btn-primary mb-3" id="successToastBtn">
                   Agregar producto
                 </button>
+                <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                  <div class="toast align-items-center text-bg-pink border-0" id="successToast" role="alert" aria-live="assertive" aria-atomic="true" >
+                    <div class="d-flex">
+                      <div class="toast-body">
+                        ¡Su producto ha sido creado! 🎉
+                      </div>
+                      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                    </div>
+                  </div>
+                </div>
+                
               </form>
               <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li class="nav-item dropdown">
@@ -191,6 +206,7 @@
       </nav>
     </header>
     <main>
+      
       <div class="container-fluid min-vh-100 px-0">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-0">
           <!-- Portada -->
@@ -364,6 +380,7 @@
     <script type="module" src="/scripts/adminList.js"></script>
     <script type="module" src="/scripts/getProducts.js"></script>
     <script type="module" src="/scripts/products.js"></script>
+    <script type="module" src="/scripts/successToast.js"></script>
     <!-- <script src="/scripts/popper.min.js"></script> -->
     <!-- <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script> -->
   </body>
