@@ -1,6 +1,5 @@
 import MenuItem from "./MenuItem.js";
-import { getLocalStorage } from "./getProducts.js";
-import { renderProducts } from "./scripting.js";
+
 // Weekly
 const avocado = new MenuItem(
   "Avocado",

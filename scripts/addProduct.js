@@ -27,7 +27,7 @@ addProduct.addEventListener("submit", (e) => {
   pushProduct(newProduct);
   renderProducts();
   listProducts();
-  setLocalStorage("productos", products);
+  // setLocalStorage("productos", products);
 });
 
 const pushProduct = (product) => {
