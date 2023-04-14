@@ -193,7 +193,8 @@
     <main>
       <div class="container-fluid min-vh-100 px-0">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-0">
-          <section class="body_background d-flex align-items-center justify-content-center">
+          <!-- Portada -->
+          <section class="body_background d-flex align-items-center justify-content-center section_border">
             <div class="container">
               <div class="row text-center px-3">
                 <div class="portada_background">
@@ -204,9 +205,13 @@
                 </div>
             </div>
           </section>
+          <!-- Portada back -->
+          <section class="section_border portada_back">
+            
+          </section>
           <!-- Las etiquetas section tienen 100vh height -->
           <!-- Sección de recomendados -->
-          <section id="weekly">
+          <section id="weekly" class="section_border">
             <header>
               <div class="vh-20 overflow-hidden d-flex align-items-center">
                 <img src="/img/weekly.jpg" class="img-fluid" />
@@ -224,7 +229,7 @@
             <div id="weeklyItemsList"></div>
           </section>
           <!-- Cafetería -->
-          <section id="coffee">
+          <section id="coffee" class="section_border">
             <div class="vh-20 overflow-hidden d-flex align-items-center">
               <img src="/img/coffee.jpg" class="img-fluid" />
             </div>
@@ -242,7 +247,7 @@
             </div>
           </section>
           <!-- Especialidades -->
-          <section id="specials">
+          <section id="specials" class="section_border">
             <div class="vh-20 overflow-hidden d-flex align-items-center">
               <img src="/img/specials.jpg" class="img-fluid" />
             </div>
@@ -258,7 +263,7 @@
             <div id="specialsItemsList"></div>
           </section>
           <!-- Bebidas -->
-          <section id="drinks">
+          <section id="drinks" class="section_border">
             <div class="vh-20 overflow-hidden d-flex align-items-center">
               <img src="/img/drinks.jpg" class="img-fluid" />
             </div>
@@ -273,8 +278,13 @@
             </header>
             <div id="drinksItemsList"></div>
           </section>
+          
+        </div>
+      </div>
+      <div class="container-fluid min-vh-100 px-0">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 gx-0">
           <!-- Desayunos y meriendas -->
-          <section id="breakfast">
+          <section id="breakfast" class="section_border">
             <div class="vh-20 overflow-hidden d-flex align-items-center">
               <img src="/img/breakfast.jpg" class="img-fluid" />
             </div>
@@ -292,12 +302,8 @@
             </header>
             <div id="breakfastItemsList"></div>
           </section>
-        </div>
-      </div>
-      <div class="container-fluid min-vh-100 px-0">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 gx-0">
           <!-- Tortas y postres -->
-          <section id="cakes">
+          <section id="cakes" class="section_border">
             <div class="vh-20 overflow-hidden d-flex align-items-center">
               <img src="/img/cakes.jpg" class="img-fluid" />
             </div>
@@ -313,7 +319,7 @@
             <div id="cakesItemsList"></div>
           </section>
           <!-- Veganos -->
-          <section id="veggie">
+          <section id="veggie" class="section_border">
             <div class="vh-20 overflow-hidden d-flex align-items-center">
               <img src="/img/veggie.jpg" class="img-fluid" />
             </div>
@@ -329,7 +335,7 @@
             <div id="veggieItemsList"></div>
           </section>
           <!-- Brunch -->
-          <section id="brunch">
+          <section id="brunch" class="section_border">
             <div class="vh-20 overflow-hidden d-flex align-items-center">
               <img src="/img/brunch.jpg" class="img-fluid" />
             </div>
@@ -344,7 +350,11 @@
             </header>
             <div id="brunchItemsList"></div>
           </section>
-          <section class="body_background"></section>
+          <!-- Contraportada back -->
+          <section class="section_border contraportada_back">
+            
+          </section>
+          <section class="body_background section_border"></section>
         </div>
       </div>
     </main>
